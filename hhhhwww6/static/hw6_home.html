@@ -1,0 +1,1333 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<style>
+body{
+    background-color: black;
+        
+}
+h4.header{
+    background: linear-gradient(90deg, black 80%, rgb(194, 39, 31));
+    text-align: left;
+    color:rgb(194, 39, 31);
+    margin-top: 13px;
+      
+}
+.tab{
+    float: left;
+    padding-left:115px;
+    color:white;
+    width: 130px;
+    height:200px;
+    
+}
+.tab button{
+    color:white;
+    display: block;
+    background-color: inherit;
+    
+    padding: 10px 10px;
+    /*width: 100%;*/
+    width:130px;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    
+    font-size: 12px;
+}
+
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    color:rgb(194, 39, 31);
+    border-bottom: 0.5px solid white;
+}
+
+.tabcontent {
+    
+    float: left;
+    padding: 0px 12px;
+    color:white;
+    width:1000px;
+    
+    border-left: 0.5px solid white;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    
+}
+.slidemovie{
+    font-size: 14px;
+    height:400px;
+    
+}
+.slidemovie .here{
+    top: 353;
+    left: 397;
+    width: 500px;
+    
+    position: absolute;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    
+    padding: 20px;
+}
+.slidetv .here{
+    top: 805;
+    left: 397;
+    width: 500px;
+    
+    position: absolute;
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    
+    padding: 20px;
+    
+}
+.slidetv{
+    font-size: 14px;
+    height:400px;
+    
+}
+.home{
+    width:800px;
+}
+.movie{
+    width:800px;
+    text-align: center;
+    
+}
+.tvhere{
+    text-align: center;
+    width:800px;
+}
+.tabcontent:hover #searchback.searchback{
+    background-color:color:rgb(194, 39, 31);
+    color:white;
+}
+#showing{
+    width:1000px;
+    text-align: left;
+    font-size: 13px;
+}
+.searchback1{
+    text-align: center;
+    margin-left: 0px;
+    border:none;
+    width: 56px;
+    border-radius: 4px;
+    height: 25px;
+    background:black;
+    color:white;
+}
+.searchback1:hover {
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  background:rgb(194, 39, 31);
+  
+}
+.searchback1:focus {
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  background:black;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-right-width: 1px;
+  border-right-style: solid;
+}
+
+.searchback2{
+    background-color:black;
+    color:white;
+    border-radius: 4px;
+    width: 56px;
+    height: 25;
+    text-align: center;
+    margin-left:25px;
+}
+.searchback2:hover{
+    background-color:rgb(194, 39, 31);
+    color:white;
+    border-radius: 4px;
+    width: 56px;
+    height: 25;
+    text-align: center;
+    margin-left:25px;
+}
+#bck{
+    width: 1025px;
+    height: 206px;
+    background: linear-gradient(0deg, black -13%, rgb(194, 39, 31));
+}
+#searchback :hover {
+    background-color:color:rgb(194, 39, 31);
+    color:white;
+}
+#search{
+    color:white;
+    
+}
+#defaultOpen{
+    word-spacing: 60px;
+    
+}
+#searchtext{
+    
+    word-spacing: 54px;
+}
+
+select{
+    border-radius: 4px;
+    border:none;
+}
+label{
+    font-size: 13px;
+    word-spacing: 7px;
+}
+input{
+    border-radius: 4px;
+    border:none;
+    padding-left: 5px;
+}
+#showing{
+    float: left;
+}
+.details{
+    float: left;
+    font-size: 12px;
+    
+}
+.show_more:hover,
+.show_more:focus{
+    background:Grey;
+    color:white;
+    
+}
+.show{
+    
+    float: left;
+}
+.titleclass{
+    text-align: left;
+    float: left;
+    margin-bottom: 5.28px;
+    margin-top: 9px;
+    padding-top: 30px;
+    width: 800;
+}
+.show_more{
+        float: left;
+        width: 85px;
+        height: 24px;
+        text-align: center;
+        padding-left: 0px;
+        padding-right: 0px;
+        color: white;
+        background: rgb(194, 39, 31);
+        border: none;
+        border-radius: 4px;
+    }
+}
+.modal{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+#modalwrapper{
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 30px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    font-family: 'Raleway', sans-serif;
+    /*margin-top:50px;*/
+}
+/* Modal Content */
+.modal-content {
+  background-color: rgb(234, 234, 234);
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 65%;
+  padding-bottom: 53px;
+  padding-left: 44px;
+  padding-right: 39px;
+  overflow-y: auto;
+}
+#more_image{
+    
+    text-align: center;
+}
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 24px;
+  margin-top: -6px;
+  margin-right: -18px;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.web:hover,
+.web:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+.star{
+    color:rgb(194, 39, 31);
+    font-size: 13px;
+    padding-top: 2px;
+}
+.cast{
+    width: 200px;
+    height: 388px;
+    text-align: center;
+    font-size:12px;
+}
+#group1, #group2{
+    width: 800px;
+    display: inline-flex;
+    margin-top: -5px;
+    height: 340px;
+}
+.cast_text{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.review{
+    font-size:12px;
+    float:right;
+    width: 890px;
+    height: auto;
+}
+.namedate{
+    display: flex;
+}
+#wrap{
+    display: flex;
+    height:69px;
+}
+
+#web{
+    color: rgb(194, 39, 31);
+    margin-left: 9px;
+    font-size: 12px;
+    text-align: center;
+    padding-bottom: 0px;
+    margin-top: 35.96px;
+}
+#more_title{
+    font-size: 21px;
+}
+#more_detail1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size:16px;
+}
+#more_rate2{
+    margin-left: 10px;
+    font-size:13px;
+}
+#more_rate{
+    color:rgb(194, 39, 31);
+    font-size:13px;
+}
+#more_overview{
+    font-size:13px;
+    margin-top: 0px;
+    
+}
+#more_language{
+    font-size:13px;
+    font-style: italic;
+    margin-bottom: 52px;
+}
+.clickclick{
+    margin-top: 12px;
+    padding-left: 145px;
+}
+#myform{
+    margin-bottom: 42px;
+}
+.blockclass{
+    margin-bottom: 15px;
+}
+#rapper{
+    width: 800px;
+    float: left;
+    text-align:left;
+    
+}
+.details1{
+    width: 800;
+    text-align: left;
+    margin-bottom: 0px;
+    float: left;
+    font-size: 12px;
+}
+.details2{
+    
+    color:rgb(194, 39, 31);
+    margin-top: 0px;
+    padding-left: 0px;
+    width: 55px;
+    margin-bottom: 0px;
+    float: left;
+    font-size: 12px;
+    
+}
+.details3{
+    margin-right: 0px;
+    
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 2px;
+    float: left;
+    font-size: 12px;
+}
+.buttom-line{
+    height: 40px;
+    width: 1115px;
+    background: rgb(83, 18, 13);
+    padding-left: 0px;
+    margin-left: -7px;
+    text-align: right;
+    font-style: italic;
+    font-size:8px;
+    color: #ffffff73;
+}
+.buttom-line_2{
+    height: 40px;
+    width: 1115px;
+    background: rgb(83, 18, 13);
+    padding-left: 0px;
+    margin-left: -7px;
+    text-align: right;
+    font-style: italic;
+    font-size:8px;
+    color: #ffffff73;
+    position: relative;
+    bottom: 0;
+}
+.designed{
+    padding-top: 9px;
+    padding-right: 6px;
+}
+</style>
+</head>
+
+<body>
+<h4 class="header" style="height: 25.2px;">THE MOVIE DB</h4>
+<div class="tab">
+    <button class="tablinks" onclick="openLink(event, 'home')" id="defaultOpen" >Home ⟶</button>
+    <button class="tablinks" onclick="openLink(event, 'search')" id="searchtext">Search ⟶</button>
+    
+</div>
+
+<div id="home" class="tabcontent">
+
+<p id="movies" style="width: 800px;">Trending Movies </p>
+  <div class="movie">
+  <div class="slidemovie" >
+    <div id="image1">
+        <div id="text1" class="here"></div>
+    </div>
+  </div>
+  <div class="slidemovie" >
+    <div id="image2">
+        <div id="text2" class="here"></div>
+    </div>
+  </div>
+  <div class="slidemovie">
+    <div id="image3">
+        <div id="text3" class="here"></div>
+    </div>
+  </div>
+  <div class="slidemovie">
+    <div id="image4">
+        <div id="text4" class="here"></div>
+    </div>
+  </div>
+  <div class="slidemovie">
+    <div id="image5">
+        <div id="text5" class="here"></div>
+    </div>
+  </div>
+  </div>
+<p id="tvs" style="width: 800px;">TV Shows On-Air Today</p>
+<div class="tvhere">
+    <div class="slidetv">
+      <div id="tv1">
+          <div id="text6" class="here"></div>
+      </div>
+    </div>
+    <div class="slidetv">
+      <div id="tv2">
+          <div id="text7" class="here"></div>
+      </div>
+    </div>
+    <div class="slidetv">
+      <div id="tv3">
+          <div id="text8" class="here"></div>
+      </div>
+    </div>
+    <div class="slidetv">
+      <div id="tv4">
+          <div id="text9" class="here"></div>
+      </div>
+    </div>
+    <div class="slidetv">
+      <div id="tv5">
+          <div id="text10" class="here"></div>
+      </div>
+    </div>
+    <div class="buttom-line">
+        <p class="designed">Designed and developed by Akansha. Pranav & Yash<br><span>Powered by TMDB</span></p>
+    </div>
+</div>
+
+</div>
+
+<div id="search" class="tabcontent" style="margin-top: -16px;">
+    <div id="bck"></div>
+  <h4 style="top: 0;margin-top: -179px;">Search</h4>
+  <form id="myForm" name="form1" action="result" >
+    <label for="key">Keyword<span style="color:red">* </label>
+    <input type="search" id="key" name="key" style="width: 250px;" ><br><br>
+    <div class="C" style="padding-left: 0px;margin-left: 0px; width: 862px; margin-left: -4px;">
+    <label for="cate">Category<span style="color:red">* </label>
+    <select name="cate" id="cate"  style="width: 103px;">
+      <option value="first" selected></option>
+      <option value="movie">Movies</option>
+      <option value="tv">TV Shows</option>
+      <option value="multi">Movies and TV Shows</option>
+    </select>
+    <br>
+    <div class="clickclick">
+    <button id="searchback_" class="searchback1" type="button" value="Search" onclick="clicksubmit()" style="text-align: center;" tabindex="1">Search</button>
+    <input id="searchback" class="searchback2" type="reset" value="Clear" onclick="document.getElementById('key').value = ''"></input>
+    </div>
+    </div>
+    
+    
+  </form>
+  <div id="noresult" style="font-size: 13px;"></div>
+  <div id="showing"></div><br>
+  <div id="result">
+      <div id="block1" class="blockclass" style="height: 230px;border-left: 4px solid rgb(194, 39, 31);display:none;">
+          <div id="poster1" class="show" style="margin-right: 32px; padding-left: 9px;margin-top: 8px;"></div>
+          
+              <h4 id="title1" class="titleclass" style="margin-bottom: 5.28px;margin-top: 9px;padding-top: 30px;width: 800px;"></h4>
+              <div id="rapper">
+                  <p id="black1_detail1" class="details1"></p>
+                  <p id="black1_rate" class="details2" ></p>
+                  <p id="black1_count" class="details3" ></p>
+              </div>
+              <br>
+              <p id="black1_overview" class="details" style="width: 800px;float: left;text-align: left;margin-top: 21px;"></p>
+              <button id="show_more1" class="show_more" onclick="showmore(this)">Show more</button>
+          
+      </div>
+      
+      <div id="block2" class="blockclass" style="height: 230px;border-left: 4px solid rgb(194, 39, 31);display:none;">
+          <div id="poster2" class="show" style="margin-right: 32px; padding-left: 9px;margin-top: 8px;"></div>
+          <h4 id="title2" class="titleclass" style="margin-bottom: 5.28px;margin-top: 9px;padding-top: 30px;width: 800px;"></h4>
+          <div id="rapper">
+              <p id="black2_detail1" class="details1"></p>
+              <p id="black2_rate" class="details2" ></p>
+              <p id="black2_count" class="details3" ></p>
+          </div>
+          <br>
+          <p id="black2_overview" class="details" style="width: 800px;float: left;text-align: left;margin-top: 21px;"></p>
+          <button id="show_more2" class="show_more" onclick="showmore(this)">Show more</button>
+      </div>
+      
+      <div id="block3" class="blockclass" style="height: 230px;border-left: 4px solid rgb(194, 39, 31);display:none;">
+          <div id="poster3" class="show" style="margin-right: 32px; padding-left: 9px;margin-top: 8px;"></div>
+          <h4 id="title3" class="titleclass" style="margin-bottom: 5.28px;margin-top: 9px;padding-top: 30px;width: 800px;"></h4>
+          <div id="rapper">
+              <p id="black3_detail1" class="details1"></p>
+              <p id="black3_rate" class="details2" ></p>
+              <p id="black3_count" class="details3" ></p>
+          </div>
+          <br>
+          <p id="black3_overview" class="details" style="width: 800px;float: left;text-align: left;margin-top: 21px;"></p>
+          <button id="show_more3" class="show_more" onclick="showmore(this)">Show more</button>
+      </div>
+      
+      <div id="block4" class="blockclass" style="height: 230px;border-left: 4px solid rgb(194, 39, 31);display:none;">
+          <div id="poster4" class="show" style="margin-right: 32px; padding-left: 9px;margin-top: 8px;"></div>
+          <h4 id="title4" class="titleclass" style="margin-bottom: 5.28px;margin-top: 9px;padding-top: 30px;width: 800px;"></h4>
+          <div id="rapper">
+              <p id="black4_detail1" class="details1"></p>
+              <p id="black4_rate" class="details2" ></p>
+              <p id="black4_count" class="details3" ></p>
+          </div>
+          <br>
+          <p id="black4_overview" class="details" style="width: 800px;float: left;text-align: left;margin-top: 21px;"></p>
+          <button id="show_more4" class="show_more" onclick="showmore(this)">Show more</button>
+      </div>
+      
+      <div id="block5" class="blockclass" style="height: 230px;border-left: 4px solid rgb(194, 39, 31);display:none;">
+          <div id="poster5" class="show" style="margin-right: 32px; padding-left: 9px;margin-top: 8px;"></div>
+          <h4 id="title5" class="titleclass" style="margin-bottom: 5.28px;margin-top: 9px;padding-top: 30px;width: 800px;"></h4>
+          <div id="rapper">
+              <p id="black5_detail1" class="details1"></p>
+              <p id="black5_rate" class="details2" ></p>
+              <p id="black5_count" class="details3" ></p>
+          </div>
+          <br>
+          <p id="black5_overview" class="details" style="width: 800px;float: left;text-align: left;margin-top: 21px;"></p>
+          <button id="show_more5" class="show_more" onclick="showmore(this)">Show more</button>
+      </div>
+      
+      <div id="block6" class="blockclass" style="height: 230px;border-left: 4px solid rgb(194, 39, 31);display:none;">
+          <div id="poster6" class="show" style="margin-right: 32px; padding-left: 9px;margin-top: 8px;"></div>
+          <h4 id="title6" class="titleclass" style="margin-bottom: 5.28px;margin-top: 9px;padding-top: 30px;width: 800px;"></h4>
+          <div id="rapper">
+              <p id="black6_detail1" class="details1"></p>
+              <p id="black6_rate" class="details2" ></p>
+              <p id="black6_count" class="details3" ></p>
+          </div>
+          <br>
+          <p id="black6_overview" class="details" style="width: 800px;float: left;text-align: left;margin-top: 21px;"></p>
+          <button id="show_more6" class="show_more" onclick="showmore(this)">Show more</button>
+      </div>
+      
+      <div id="block7" class="blockclass" style="height: 230px;border-left: 4px solid rgb(194, 39, 31);display:none;">
+          <div id="poster7" class="show" style="margin-right: 32px; padding-left: 9px;margin-top: 8px;"></div>
+          <h4 id="title7" class="titleclass" style="margin-bottom: 5.28px;margin-top: 9px;padding-top: 30px;width: 800px;"></h4>
+          <div id="rapper">
+              <p id="black7_detail1" class="details1"></p>
+              <p id="black7_rate" class="details2" ></p>
+              <p id="black7_count" class="details3" ></p>
+          </div>
+          <br>
+          <p id="black7_overview" class="details" style="width: 800px;float: left;text-align: left;margin-top: 21px;"></p>
+          <button id="show_more7" class="show_more" onclick="showmore(this)">Show more</button>
+      </div>
+      
+      <div id="block8" class="blockclass" style="height: 230px;border-left: 4px solid rgb(194, 39, 31);display:none;">
+          <div id="poster8" class="show" style="margin-right: 32px; padding-left: 9px;margin-top: 8px;"></div>
+          <h4 id="title8" class="titleclass" style="margin-bottom: 5.28px;margin-top: 9px;padding-top: 30px;width: 800px;"></h4>
+          <div id="rapper">
+              <p id="black8_detail1" class="details1"></p>
+              <p id="black8_rate" class="details2" ></p>
+              <p id="black8_count" class="details3" ></p>
+          </div>
+          <br>
+          <p id="black8_overview" class="details" style="width: 800px;float: left;text-align: left;margin-top: 21px;"></p>
+          <button id="show_more8" class="show_more" onclick="showmore(this)">Show more</button>
+      </div>
+      
+      <div id="block9" class="blockclass" style="height: 230px;border-left: 4px solid rgb(194, 39, 31);display:none;">
+          <div id="poster9" class="show" style="margin-right: 32px; padding-left: 9px;margin-top: 8px;"></div>
+          <h4 id="title9" class="titleclass" style="margin-bottom: 5.28px;margin-top: 9px;padding-top: 30px;width: 800px;"></h4>
+          <div id="rapper">
+              <p id="black9_detail1" class="details1"></p>
+              <p id="black9_rate" class="details2" ></p>
+              <p id="black9_count" class="details3" ></p>
+          </div>
+          <br>
+          <p id="black9_overview" class="details" style="width: 800px;float: left;text-align: left;margin-top: 21px;"></p>
+          <button id="show_more9" class="show_more" onclick="showmore(this)">Show more</button>
+      </div>
+      
+      <div id="block10" class="blockclass" style="height: 230px;border-left: 4px solid rgb(194, 39, 31);display:none;">
+          <div id="poster10" class="show" style="margin-right: 32px; padding-left: 9px;margin-top: 8px;"></div>
+          <h4 id="title10" class="titleclass" style="margin-bottom: 5.28px;margin-top: 9px;padding-top: 30px;width: 800px;"></h4>
+          <div id="rapper">
+              <p id="black10_detail1" class="details1"></p>
+              <p id="black10_rate" class="details2" ></p>
+              <p id="black10_count" class="details3" ></p>
+          </div>
+          <br>
+          <p id="black10_overview" class="details" style="width: 800px;float: left;text-align: left;margin-top: 21px;"></p>
+          <button id="show_more10" class="show_more" onclick="showmore(this)">Show more</button>
+      </div>
+      <div class="buttom-line_2" id="buttom-line_2" >
+          <p class="designed">Designed and developed by Akansha. Pranav & Yash<br><span>Powered by TMDB</span></p>
+      </div>
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+<div id="modalwrapper">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    
+    <div id="more_image"></div>
+    <div id="wrap">
+        <h4 id="more_title" class="more_title"></h4>
+        <span id="web" class="web" style= "color:rgb(194, 39, 31)">ⓘ</span>
+    </div>
+    <p id="more_detail1" class="more_detail1"></p>
+    <div id="wrap">
+        <p class="star">★</p>
+        <p id="more_rate" class="more_rate"></p>
+        <p id="more_rate2"></p>
+    </div>
+    <p id="more_overview" class="more_overview"></p>
+    <p id="more_language"></p>
+    <div id="wrapcasts" style="display: none;">
+    <h4>Cast</h4>
+    <div class="casts" style="display: inline;">
+        <div id="group1">
+        <div id="cast1" class="cast">
+            <div id="cast1_image" style="margin-bottom: 5px;"></div>
+            <p id="cast1_name" class="cast_text" style="font-weight: bold;"></p>
+            <p id="cast_text1" class="cast_text"></p>
+            <p id="cast1_char" class="cast_text"></p>
+        </div>
+        <div id="cast2" class="cast">
+            <div id="cast2_image" style="margin-bottom: 5px;"></div>
+            <p id="cast2_name" class="cast_text" style="font-weight: bold;"></p>
+            <p id="cast_text2" class="cast_text"></p>
+            <p id="cast2_char" class="cast_text"></p>
+        </div>
+        <div id="cast3" class="cast">
+            <div id="cast3_image" style="margin-bottom: 5px;"></div>
+            <p id="cast3_name" class="cast_text" style="font-weight: bold;"></p>
+            <p id="cast_text3" class="cast_text"></p>
+            <p id="cast3_char" class="cast_text"></p>
+        </div>
+        <div id="cast4" class="cast">
+            <div id="cast4_image" style="margin-bottom: 5px;"></div>
+            <p id="cast4_name" class="cast_text" style="font-weight: bold;"></p>
+            <p id="cast_text4" class="cast_text"></p>
+            <p id="cast4_char" class="cast_text"></p>
+        </div>
+        </div>
+        <div id="group2" style="height: 345px;">
+        <div id="cast5" class="cast">
+            <div id="cast5_image" style="margin-bottom: 5px;"></div>
+            <p id="cast5_name" class="cast_text" style="font-weight: bold;"></p>
+            <p id="cast_text5" class="cast_text"></p>
+            <p id="cast5_char" class="cast_text"></p>
+        </div>
+        <div id="cast6" class="cast">
+            <div id="cast6_image" style="margin-bottom: 5px;"></div>
+            <p id="cast6_name" class="cast_text" style="font-weight: bold;"></p>
+            <p id="cast_text6" class="cast_text"></p>
+            <p id="cast6_char" class="cast_text"></p>
+        </div>
+        <div id="cast7" class="cast">
+            <div id="cast7_image" style="margin-bottom: 5px;"></div>
+            <p id="cast7_name" class="cast_text" style="font-weight: bold;"></p>
+            <p id="cast_text7" class="cast_text"></p>
+            <p id="cast7_char" class="cast_text"></p>
+        </div>
+        <div id="cast8" class="cast">
+            <div id="cast8_image" style="margin-bottom: 5px;"></div>
+            <p id="cast8_name" class="cast_text" style="font-weight: bold;"></p>
+            <p id="cast_text8" class="cast_text"></p>
+            <p id="cast8_char" class="cast_text"></p>
+        </div></div>
+    </div>
+    </div>
+    <div id="wrapreview" style="display:none;">
+        <h4 style="margin-top: 10px; margin-bottom: 6px;">Reviews</h4>
+        <div id="review1" class="review">
+            <div class="namedate">
+            <p id="review1_username" class="review1_username" style="font-weight: bold;"></p>
+            <p id="review1_date" style="padding-left: 5px;"></p>
+            </div>
+            <p id="review1_rating" style="color:rgb(194, 39, 31);margin-top: 0px;margin-bottom: 0px;"></p>
+            <p id="review1_detail" style="margin-top: 0px;"></p>
+            <div id="border1"></div>
+        </div>
+        <div id="review2" class="review">
+            <div class="namedate">
+            <p id="review2_username" class="review2_username" style="font-weight: bold;"></p>
+            <p id="review2_date" style="padding-left: 5px;"></p>
+            </div>
+            <p id="review2_rating" style="color:rgb(194, 39, 31);margin-top: 0px;margin-bottom: 0px;"></p>
+            <p id="review2_detail" style="margin-top: 0px;"></p>
+            <div id="border2"></div>
+        </div>
+        <div id="review3" class="review">
+            <div class="namedate">
+            <p id="review3_username" class="review3_username" style="font-weight: bold;"></p>
+            <p id="review3_date" style="padding-left: 5px;"></p>
+            </div>
+            <p id="review3_rating" style="color:rgb(194, 39, 31);margin-top: 0px;margin-bottom: 0px;"></p>
+            <p id="review3_detail" style="margin-top: 0px;"></p>
+            <div id="border3"></div>
+        </div>
+        <div id="review4" class="review">
+            <div class="namedate">
+            <p id="review4_username" class="review4_username" style="font-weight: bold;"></p>
+            <p id="review4_date" style="padding-left: 5px;"></p>
+            </div>
+            <p id="review4_rating" style="color:rgb(194, 39, 31);margin-top: 0px;margin-bottom: 0px;"></p>
+            <p id="review4_detail" style="margin-top: 0px;"></p>
+            <div id="border4"></div>
+        </div>
+        <div id="review5" class="review">
+            <div class="namedate">
+            <p id="review5_username" class="review5_username" style="font-weight: bold;"></p>
+            <p id="review5_date" style="padding-left: 5px;"></p>
+            </div>
+            <p id="review5_rating" style="color:rgb(194, 39, 31);margin-top: 0px;margin-bottom: 0px;"></p>
+            <p id="review5_detail" style="margin-top: 0px;"></p>
+            <div id="border5"></div>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+    let searchdata=[];
+    let thing;
+    let Now_type;
+    let more_link;
+    var modal = document.getElementById("myModal");
+    var span = document.getElementsByClassName("close")[0];
+    var info = document.getElementsByClassName("web")[0];
+    console.log(info);
+    modal.style.display="none";
+    info.onclick = function(){
+        console.log(more_link);
+        url = 'https://www.themoviedb.org/' +Now_type +'/'+ more_link;
+        window.open(url);
+    }
+    span.onclick = function() {
+        modal.style.display = "none";
+        document.getElementById("more_image").innerHTML="";
+        document.getElementById("more_title").innerHTML="";
+        document.getElementById("more_detail1").innerHTML="";
+        document.getElementById("more_rate").innerHTML="";
+        document.getElementById("more_rate2").innerHTML="";
+        document.getElementById("more_overview").innerHTML="";
+        document.getElementById("more_language").innerHTML="";
+        document.getElementById("wrapreview").style.display = "none";
+        var i;
+        for(i=0;i<8;i++){
+            var curr = 'cast'+(i+1)+'_image';
+            document.getElementById(curr).innerHTML="";
+            var curr = 'cast'+(i+1)+'_name';
+            document.getElementById(curr).innerHTML="";
+            var curr = 'cast'+(i+1)+'_char';
+            document.getElementById(curr).innerHTML="";
+            var curr = 'cast_text'+(i+1);
+            document.getElementById(curr).innerHTML="";
+        }
+        for(i=0;i<5;i++){
+            var curr = 'review'+(i+1)+'_username';
+            document.getElementById(curr).innerHTML="";
+            var curr = 'review'+(i+1)+'_date';
+            document.getElementById(curr).innerHTML="";
+            var curr = 'review'+(i+1)+'_rating';
+            document.getElementById(curr).innerHTML="";
+            var curr = 'review'+(i+1)+'_detail';
+            document.getElementById(curr).innerHTML="";
+            var curr = 'border'+(i+1);
+            var border =document.getElementById(curr);
+            border.style.cssText ='';
+        }
+        
+    }
+    function showmore(elem){
+        var type;
+        
+        var id = document.getElementById(elem.id);
+        id = id.parentElement.id;
+        //elem.target.parentNode.id;
+        console.log(id);
+        id = id.toString().substr(5,id.length)
+        console.log(id);
+        type = searchdata[id-1].media_type;
+        Now_type = type;
+        thing = id-1;
+        id = searchdata[id-1].id;
+        //console.log(type);
+        var requ = new XMLHttpRequest();
+        requ.onreadystatechange = function(){
+            
+            if (this.readyState == 4 && this.status == 200) {
+                var res = JSON.parse(this.responseText);
+                info = res[0];
+                cast = res[1];
+                review = res[2];
+                console.log(info);
+                console.log(cast);
+                console.log(review);
+                printshowmore(JSON.stringify(info,undefined,2));
+                modal.style.display="block";
+                if(cast.length != 0){
+                    console.log(cast.length );
+                    printcasts(JSON.stringify(cast,undefined,2));
+                    document.getElementById("wrapcasts").style.display = "block";
+                }
+                if(review.length != 0){
+                    console.log(review.length);
+                    printreview(JSON.stringify(review,undefined,2));
+                    document.getElementById("wrapreview").style.display = "block";
+                }
+                
+            }
+        }
+        console.log(type);
+        requ.open('POST','/detail',true);
+        requ.setRequestHeader('content-type','application/x-www-form-urlencoded;charset=UTF-8');
+        requ.send("id=" + id + "&type=" +type);
+        
+    }
+    
+    
+    function printcasts(data){
+        data = JSON.parse(data);
+        //console.log(data);
+        var len = data.length;
+        for (i = 0; i < len; i++) {
+            var img = new Image;
+            if(data[i].profile_path==null){
+                img.src = "https://bytes.usc.edu/cs571/s21_JSwasm00/hw/HW6/imgs/person-placeholder.png";
+            }else{
+                var url = "https://image.tmdb.org/t/p/w185" + data[i].profile_path;
+                img.src = url;
+            }
+            var curr = 'cast'+(i+1)+'_image';
+            var element = document.getElementById(curr);
+            element.insertAdjacentElement("afterbegin", img);
+            
+            var text = data[i].name;
+            var content = document.createTextNode(text);
+            var curr = 'cast'+(i+1)+'_name';
+            var src_text =document.getElementById(curr);
+            src_text.appendChild(content);
+            
+            var curr = 'cast_text'+(i+1);
+            var src_text =document.getElementById(curr);
+            var content = document.createTextNode("AS");
+            src_text.appendChild(content);
+            
+            var text = data[i].character;
+            var content = document.createTextNode(text);
+            var curr = 'cast'+(i+1)+'_char';
+            var src_text =document.getElementById(curr);
+            src_text.appendChild(content);
+        }
+        
+        console.log(i,len);
+        
+    }
+    function printreview(data){
+        data = JSON.parse(data);
+        //console.log(data);
+        var len = data.length;
+        for (i = 0; i < len; i++) {
+            var text = data[i].username;
+            var content = document.createTextNode(text);
+            var curr = 'review'+(i+1)+'_username';
+            var src_text =document.getElementById(curr);
+            src_text.appendChild(content);
+            
+            var text = data[i].created_at;
+            var date = "on "+text.substr(5,2)+'/'+text.substr(8,2)+'/'+text.substr(0,4);
+            var content = document.createTextNode(date);
+            var curr = 'review'+(i+1)+'_date';
+            var src_text =document.getElementById(curr);
+            src_text.appendChild(content);
+            
+            if(data[i].rating!=""){
+                var text =  "★ "+data[i].rating+"/5";
+                var content =document.createTextNode(text);
+                var curr = 'review'+(i+1)+'_rating';
+                var src_text =document.getElementById(curr);
+                src_text.appendChild(content);
+            }
+            
+            var text = data[i].content;
+            var content = document.createTextNode(text);
+            var curr = 'review'+(i+1)+'_detail';
+            var src_text =document.getElementById(curr);
+            src_text.appendChild(content);
+            
+            var curr = 'border'+(i+1);
+            var border =document.getElementById(curr);
+            border.style.cssText ='border-bottom: 1px solid #bbb;width: 750px;margin-left: 54px;';
+        /*
+            #border{
+                border-bottom: 1px solid #bbb;
+                width: 750px;
+                margin-left: 54px;
+            }*/
+        }
+    }
+    function printshowmore(data){
+        data = JSON.parse(data);
+        var img = new Image;
+        //console.log(data);
+        more_link = data[0].id;
+        if(data[0].backdrop_path==null){
+            img.src = "https://bytes.usc.edu/cs571/s21_JSwasm00/hw/HW6/imgs/movie-placeholder.jpg";
+        }else{
+            var url = "https://image.tmdb.org/t/p/w780" + data[0].backdrop_path;
+            img.src = url;
+        }
+        var element = document.getElementById("more_image");
+        element.insertAdjacentElement("afterbegin", img);
+        
+        
+        var text = data[0].genre;
+        if(text != null){
+            text = text.toString();
+            var date = data[0].date;
+            if(date != null){
+                date = date.substr(0,4);
+                text = data+" | "+text;
+            }
+            var content = document.createTextNode(text);
+            var src_text = document.getElementById("more_detail1");
+            src_text.appendChild(content);
+        }
+        
+        var text = data[0].title;
+        var content = document.createTextNode(text);
+        var src_text =document.getElementById("more_title");
+        //src_text.insertAdjacentElement("afterbegin", text);
+        src_text.appendChild(content);
+    
+        var text = data[0].vote_avg+"/5";
+        var content = document.createTextNode(text);
+        var src_text =document.getElementById("more_rate");
+        src_text.appendChild(content);
+        
+        var text = data[0].vote_count+" votes";
+        var content = document.createTextNode(text);
+        var src_text =document.getElementById("more_rate2");
+        src_text.appendChild(content);
+        
+        var text = searchdata[thing].overview;
+        console.log(text);
+        //var content = document.createTextNode(text.toString());
+        var src_text =document.getElementById("more_overview");
+        src_text.innerHTML+=text;
+        
+        var text = data[0].spoken_languages;var i,str=[];
+        str.push("Spoken language:");
+        for(i=0;i<text.length;i++){
+            str.push(text[i].english_name);
+        }
+        var content = document.createTextNode(str.toString());
+        var src_text =document.getElementById("more_language");
+        src_text.appendChild(content);
+        
+    }
+    function printresult(data){
+        data = JSON.parse(data);
+        
+        searchdata = data;
+        var i;
+        var len = data.length;
+        for (i = 0; i < len; i++) {
+            var img = new Image(150,210);
+            if(data[i].path==null){
+                img.src = "https://cinemaone.net/images/movie_placeholder.png";
+            }else{
+                var url = "https://image.tmdb.org/t/p/w185" + data[i].path;
+                img.src = url;
+            }
+            var curr = 'poster'+(i+1);
+            var element = document.getElementById(curr);
+            element.insertAdjacentElement("afterbegin", img);
+            
+            var text = data[i].title;
+            var content = document.createTextNode(text);
+            var curr = 'title'+(i+1);
+            var src_text =document.getElementById(curr);
+            src_text.appendChild(content);
+            
+            var text = data[i].genre;
+            text = text.toString();
+            var date = data[i].date
+            console.log(text,data[i].date);
+            if(text=="" && date==""){
+                var content = "";
+            }else if(!date){
+                var content = text;
+            }else if(text.length == 0){
+                var content = date.substr(0,4);
+            }else{
+                var content = date.substr(0,4)+'|'+text;
+            }
+            
+            var curr = 'black'+(i+1)+'_detail1';
+            var src_text =document.getElementById(curr);
+            var content = document.createTextNode(content);
+            src_text.appendChild(content);
+            
+            /*
+            var text = data[i].genre;
+            if(text != null){
+                text = text.toString();
+                var date = data[i].date;
+                if(date != null){
+                    console.log(date,text);
+                    date = date.substr(0,4);
+                    text = data+" | "+text;
+                }
+                var curr = 'black'+(i+1)+'_detail1';
+                var src_text = document.getElementById(curr);
+                src_text.innerHTML+=text;
+            }
+            */
+            
+            var text = "★ "+data[i].vote_avg+"/5";
+            var content = document.createTextNode(text);
+            var curr = 'black'+(i+1)+'_rate';
+            var src_text =document.getElementById(curr);
+            src_text.appendChild(content);
+            
+            var text = data[i].vote_count+" votes";
+            var content = document.createTextNode(text);
+            var curr = 'black'+(i+1)+'_count';
+            var src_text =document.getElementById(curr);
+            src_text.appendChild(content);
+            
+            var text = data[i].overview;
+            console.log(text.length);
+            if(text.length > 427){
+                text = text.substr(0,425);
+                text = text + "..."
+            }
+            var content = document.createTextNode(text);
+            var curr = 'black'+(i+1)+'_overview';
+            var src_text =document.getElementById(curr);
+            src_text.appendChild(content);
+            
+            document.getElementById("block"+(i+1)).style.display = "block";
+        }
+        
+        
+    }
+    function clicksubmit(){
+        document.getElementById("searchback_").focus();
+        var key_empty = document.forms["form1"]["key"].value;
+        var cate_empty = document.forms["form1"]["cate"].value;
+        console.log("key=",key_empty);
+        console.log("cate=",cate_empty);
+        
+        if(key_empty == "" || cate_empty == "first" || key_empty == " "){
+            alert("Please fill out this field");
+            document.getElementById("searchtext").click();
+            return false;
+        }
+        var len = searchdata.length;
+        if(len!=0){
+            console.log(len)
+            for (i = 0; i < len; i++) {
+                var curr = 'poster'+(i+1);
+                document.getElementById(curr).innerHTML="";
+                var curr = 'title'+(i+1);
+                document.getElementById(curr).innerHTML="";
+                var curr = 'black'+(i+1)+'_detail1';
+                document.getElementById(curr).innerHTML="";
+                var curr = 'black'+(i+1)+'_count';
+                document.getElementById(curr).innerHTML="";
+                var curr = 'black'+(i+1)+'_rate';
+                document.getElementById(curr).innerHTML="";
+                var curr = 'black'+(i+1)+'_overview';
+                document.getElementById(curr).innerHTML="";
+                document.getElementById("block"+(i+1)).style.display = "none";
+            }
+        }
+        
+        var requ = new XMLHttpRequest();
+        var showing = document.getElementById('showing');
+        requ.onreadystatechange = function(){
+            
+            if (this.readyState == 4 && this.status == 200) {
+                var res = JSON.parse(this.responseText);
+                console.log(res);
+                console.log(res.length);
+                if(res.length==0){
+                    showing.style.display = "none";
+                    document.getElementById("noresult").style.display = "block";
+                    var noresult = document.getElementById('noresult');
+                    noresult.innerHTML = "No results found.";
+                }else{
+                    document.getElementById("noresult").style.display = "none";
+                    showing.innerHTML = "Showing results...";
+                    printresult(JSON.stringify(res,undefined,2));
+                }
+                //result.innerHTML = JSON.stringify(res,undefined,2);
+                
+            }else{
+                //showing.innerHTML = "...";
+            }
+        }
+        
+        requ.open('POST','/result',true);
+        requ.setRequestHeader('content-type','application/x-www-form-urlencoded;charset=UTF-8');
+        requ.send("key=" + document.getElementById('key').value + "&cate=" + document.getElementById('cate').value);
+        
+    }
+        
+    function openLink(evt,obj){
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        
+    
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(obj).style.display = "block";
+        
+        evt.currentTarget.className += " active";
+    }
+    
+    document.getElementById("defaultOpen").click();
+    
+    
+   
+    var i;
+    fetch('/search')
+    .then(function (response) {
+          data = response.json();
+          console.log(data);
+          console.log(response);
+          data.then(function(result) {
+                    console.log(result);
+                    
+                    
+          })
+    })
+    
+    
+    
+    insert_img();
+    
+    function insert_img(){
+        fetch('/search')
+        .then(function (response) {
+              data = response.json();
+              console.log(data);
+              console.log(response);
+              data.then(function(result) {
+                        var i;
+                        console.log("Here");
+                        console.log(result);
+                        
+                        for(i = 0; i < 5; i++){
+                        //MOVIE
+                            var img = new Image(500,300);
+                            if(result[0][i].path==null){
+                                img.src = "https://bytes.usc.edu/cs571/s21_JSwasm00/hw/HW6/imgs/movie-placeholder.jpg";
+                            }else{
+                                var url = "https://image.tmdb.org/t/p/w780" + result[0][i].path;
+                                img.src = url;
+                            }
+                            
+                            var curr = 'image'+(i+1);
+                            var src = document.getElementById(curr);
+                            src.insertAdjacentElement("afterbegin", img);
+                            
+                            var date = result[0][i].date;
+                            date = date.substr(0, 4);
+                            var text = result[0][i].title + '(' + date + ')';
+                            var currtext =  'text'+(i+1);
+                            var content = document.createTextNode(text);
+                            var src_text =document.getElementById(currtext);
+                            src_text.appendChild(content);
+                        //TV
+                            var img = new Image(500,300);
+                            if(result[1][i].path==null){
+                                img.src = "https://bytes.usc.edu/cs571/s21_JSwasm00/hw/HW6/imgs/movie-placeholder.jpg";
+                            }else{
+                                var url = "https://image.tmdb.org/t/p/w780" + result[1][i].path;
+                                img.src = url;
+                            }
+                            var curr = 'tv'+(i+1);
+                            var src = document.getElementById(curr);
+                            src.insertAdjacentElement("afterbegin", img);
+                            var date = (result[1][i].date).substr(0,4);
+                            var text = result[1][i].name + '(' + date + ')';
+                            var currtext =  'text'+(i+6);
+                            var content = document.createTextNode(text);
+                            var src_text =document.getElementById(currtext);
+                            src_text.appendChild(content);
+                        }
+                          
+                        
+                        
+              })
+              
+        })
+        
+    }
+    
+    var slideIndex = 0;
+    showSlides();
+    function showSlides() {
+        
+      var i;
+      var slides = document.getElementsByClassName("slidemovie");
+      var slidess = document.getElementsByClassName("slidetv");
+      
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        slidess[i].style.display = "none";
+      }
+      
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      
+      //console.log(slideIndex);
+      slides[slideIndex-1].style.display="block";
+      //console.log(slideIndex);
+      slidess[slideIndex-1].style.display="block";
+      
+      
+      
+      
+      
+      setTimeout(showSlides, 4000); // Change image every 4 seconds
+      
+    }
+    
+    
+</script>
+
+
+</body>
+</html>
+
