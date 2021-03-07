@@ -1181,6 +1181,7 @@ input{
                     var noresult = document.getElementById('noresult');
                     noresult.innerHTML = "No results found.";
                 }else{
+                    showing.style.display = "block";
                     document.getElementById("noresult").style.display = "none";
                     showing.innerHTML = "Showing results...";
                     printresult(JSON.stringify(res,undefined,2));
