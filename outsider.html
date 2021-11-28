@@ -1,0 +1,323 @@
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap' rel='stylesheet'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.image1{
+  width:11%;
+  height:7%;
+  text-align: left;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background: black;
+}
+.logo{
+  background: #686b6e;
+}
+span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  display: block;
+  color: #E9E9E9;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 110px;
+  letter-spacing: 8px;
+  cursor: pointer;
+}
+
+span::before {
+  content: "OUTSIDER";
+  position: absolute;
+  color: transparent;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent 0,
+    transparent 2px,
+    white 2px,
+    white 4px
+  );
+  -webkit-background-clip: text;
+  top: 0px;
+  left: 0;
+  z-index: -1;
+  transition: 1s;
+}
+
+span::after {
+  content: "OUTSIDER";
+  position: absolute;
+  color: transparent;
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent 0,
+    transparent 2px,
+    white 2px,
+    white 4px
+  );
+  -webkit-background-clip: text;
+  top: 0px;
+  left: 0px;
+  transition: 1s;
+}
+
+span:hover:before {
+  top: 10px;
+  left: 10px;
+}
+
+span:hover:after {
+  top: -10px;
+  left: -10px;
+}
+.title{
+  height:550px;
+  display: block;
+}
+.tab {
+  align:center;
+  background-color: black;
+  margin-top: 10px;
+}
+.tab button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  left:38%;
+  position:relative;
+  display:inline-block;
+  padding: 14px 16px;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 24px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: white;
+  color: black;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  text-align: center;
+  color:White;
+  border-top: none;
+  margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 50px;
+}
+.container {
+margin-top: 55px;
+  width: 100%;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image {
+
+  display: block;
+  width: 250px;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #0072b1;
+}
+
+.person:hover .overlay {
+  opacity: 0.3;
+}
+
+.icon {
+  color: white;
+  font-size: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.fa-linkedin-square:hover {
+  color: #eee;
+}
+.person{
+  position: relative;
+  display:inline-block;
+}
+.wrapper{
+  max-width: 250px;
+  margin-right: 30px;
+}
+.text{
+  font-family: 'Bebas Neue', cursive;
+}
+.intro{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 25px;
+}
+</style>
+</head>
+<body>
+  <div class='header' style="background-image: url('back.png');background-size: 100% auto;">
+    <div class="logo">
+        <img class="image1" src="USC-Games_CardOnWhite_Horiz.png" >
+    </div>
+    <div class = 'title'>
+        <span>OUTSIDER</span>
+    </div>
+  </div>
+  <!-- Tab links -->
+  <div class="tab" >
+    <button class="tablinks" onclick="openTabs(event, 'about')" id="defaultOpen">ABOUT</button>
+    <button class="tablinks" onclick="openTabs(event, 'story')" >STORY</button>
+    <button class="tablinks" onclick="openTabs(event, 'video')">GAME VIDEO</button>
+    <button class="tablinks" onclick="openTabs(event, 'member')">TEAM</button>
+  </div>
+
+  <!-- Tab content -->
+  <div id="about" class="tabcontent">
+    <p class='intro'>Outsider is a 3D Tower Defense Game.<br> Deploy high-tech portable weapons to defend against attacks!<br> Awake more memories to expose more conspiracy.
+</p>
+    <a href="https://docs.google.com/document/d/1QEPhzLid2H2Ia724y75TLGcz_4s_iGXYBRZSQc6hD04/edit?usp=sharing" download>
+      <p class='intro' style="color:white">GDC</p>
+    </a>
+
+  </div>
+  <div id="story" class="tabcontent">
+
+
+  </div>
+
+  <div id="video" class="tabcontent">
+
+
+  </div>
+
+  <div id="member" class="tabcontent">
+
+
+    <div class="container">
+      <div class='wrapper'>
+        <div class="person">
+          <img src="blank-profile-picture.png" class="image">
+          <div class="overlay">
+          <a href="https://www.linkedin.com/in/fujie-liang-75b30019b/" class="icon" title="User Profile">
+            <i class="fa fa-linkedin-square"></i>
+          </a>
+          </div>
+        </div>
+        <h2 class='text'>FuJie Liang</h2>
+      </div>
+      <div class='wrapper'>
+        <div class="person">
+          <img src="tianchen.jpeg" class="image">
+          <div class="overlay">
+          <a href="https://www.linkedin.com/in/tianchenglin/" class="icon" title="User Profile">
+            <i class="fa fa-linkedin-square"></i>
+          </a>
+          </div>
+        </div>
+        <h2 class='text'>TianCheng Lin</h2>
+      </div>
+      <div class='wrapper'>
+        <div class="person">
+          <img src="Jian.jpeg" class="image">
+          <div class="overlay">
+          <a href="https://www.linkedin.com/in/jianzheng2022/" class="icon" title="User Profile">
+            <i class="fa fa-linkedin-square"></i>
+          </a>
+          </div>
+        </div>
+        <h2 class='text'>Jian Zheng</h2>
+      </div>
+      <div class='wrapper'>
+        <div class="person">
+          <img src="amy.jpeg" class="image">
+          <div class="overlay">
+          <a href="https://www.linkedin.com/in/chiayu-tang-0b3161133/" class="icon" title="User Profile">
+            <i class="fa fa-linkedin-square"></i>
+          </a>
+          </div>
+        </div>
+        <h2 class='text'>ChiaYu Tang</h2>
+      </div>
+      <div class='wrapper'>
+        <div class="person">
+          <img src="yang.jpeg" class="image">
+          <div class="overlay">
+          <a href="https://www.linkedin.com/in/chenhao-yang/" class="icon" title="User Profile">
+            <i class="fa fa-linkedin-square"></i>
+          </a>
+          </div>
+        </div>
+        <h2 class='text'>Chenhao Yangg</h2>
+      </div>
+      <div class='wrapper'>
+        <div class="person">
+          <img src="Leyang.jpeg" class="image">
+          <div class="overlay">
+          <a href="https://www.linkedin.com/in/leyang-yu-8a8a621b5/" class="icon" title="User Profile">
+            <i class="fa fa-linkedin-square"></i>
+          </a>
+          </div>
+        </div>
+        <h2 class='text'>Leyang Yu</h2>
+      </div>
+    </div>
+
+
+
+  </div>
+<script>
+  document.getElementById("defaultOpen").click();
+  function openTabs(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+</body>
+</html>
